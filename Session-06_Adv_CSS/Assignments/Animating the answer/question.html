@@ -10,11 +10,13 @@
          }
    
          #answer {
-            color: black;
+            color: red;
             width: 100px;
    
             /* Part of your solution goes here */
-   
+            animation: moveFraction 2s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
          }
    
          /* moveFraction goes here */
@@ -22,16 +24,31 @@
    
          #question {
             /* Part of your solution goes here */
-   
+            transition: transform 0.6 ease-in-out;
          }
    
          #question:hover {
             /* Part of your solution goes here */
-   
+            transform: scale(0.9);
          }
          
          span {
             display: inline-block;         
+         }
+
+         @keyframes moveFraction {
+            0% {
+               color: yellow;
+               transform: translate(-355px, 60px);
+            }
+
+            50% {
+               transform: translate(0px, 60px);
+            }
+
+            100% {
+               transform: translate(0px, 0px);
+            }
          }
    
       </style>

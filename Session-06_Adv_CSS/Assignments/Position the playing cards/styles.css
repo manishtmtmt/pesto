@@ -3,7 +3,7 @@
     height: 300px;
  
     /* Part of your solution goes here */
-    
+   background: linear-gradient(to bottom, forestgreen, darkgreen);
  }
  
  .cardRed {
@@ -24,17 +24,24 @@
     font-size: 80px;
  
     /* Part of your solution goes here */
- 
+    border-radius: 5px;
+    box-shadow: 3px 3px black;
  }      
  
  .cardTop {
     /* Part of your solution goes here */
- 
+   position: absolute;
+   top: 100px;
+   left: 150px;
+   z-index: 1;
  }
  
  .cardBottom {
     /* Part of your solution goes here */
- 
+   position: absolute;
+   top: 120px;
+   left: 240px;
+   z-index: 0;
  }
  
  .heart {
@@ -55,10 +62,14 @@
  
  .topLeft {
     /* Part of your solution goes here */
- 
+   position: absolute;
+   left: 2px;
+   top: 0px;
  }
  
  .bottomRight {
     /* Part of your solution goes here */
- 
+   position: absolute;
+   right: 2px;
+   bottom: 0px;
  }
