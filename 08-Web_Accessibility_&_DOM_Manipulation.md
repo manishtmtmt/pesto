@@ -1,0 +1,1 @@
+[Click Here](https://cdn.filestackcontent.com/preview=css:%22https%3A%2F%2Fassets.teachablecdn.com%2Fcss%2Ffilestack-pdf-viewer.css%22/iIGfZZ1QI6bWncPBZ3px) to jump to ppt.
