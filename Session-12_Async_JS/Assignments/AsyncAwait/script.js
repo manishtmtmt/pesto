@@ -1,5 +1,3 @@
-// https://api.exchangerate.host/latest
-
 async function getExchangeRate(currencyCode) {
   const response = await fetch(`https://api.exchangerate.host/latest`);
   const data = await response.json();
