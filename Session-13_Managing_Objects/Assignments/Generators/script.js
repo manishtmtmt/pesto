@@ -8,6 +8,11 @@ const array = ['hello', 'world', 'test'];
 
 const generator = iterators(array);
 
-for (let key of generator) {
-  console.log(key);
-}
+// for (let key of generator) {
+//   console.log(key);
+// }
+
+console.log(generator.next().value);
+console.log(generator.next().value);
+console.log(generator.next().value);
+console.log(generator.next().value);
