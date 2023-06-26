@@ -2,34 +2,34 @@ let productViews = new WeakMap();
 
 let cartItems = new WeakSet();
 
-function incrementProductViews(productId) {
-  const key = { id: productId };
+const incrementProductViews = (productId) => {
+  //    let count = productViews.get(productId) || 0;
+  //    productViews.set(productId, count + 1);
 
-  if (productViews.has(key)) {
-    const currentViews = productViews.get(key);
-    const newViews = currentViews + 1;
-    productViews.set(key, newViews);
-    console.log(`Product ${productId} views: ${newViews}`);
+  if (productViews.has(productId)) {
+    let count = productViews.get(productId);
+    productViews.set(productId, count + 1);
+    console.log(`Product ID: ${productId.id}, Count: ${count + 1}`);
   } else {
-    productViews.set(key, 1);
-    console.log(`Product ${productId} views: 1`);
+    productViews.set(productId, 1);
+    console.log(`Product ID: ${productId.id}, Count: 1`);
   }
 };
 
-const productId = 123;
+
+const productId = { id: 123 };
 
 incrementProductViews(productId);
 incrementProductViews(productId);
 incrementProductViews(productId);
 incrementProductViews(productId);
 
-const addToCart = productId => {
-  const key = { id: productId };
-  if (!cartItems.has(key)) {
-    cartItems.add(key);
-    console.log(`Product ${productId} added to cart`);
+const addToCart = (productId) => {
+  if (!cartItems.has(productId)) {
+    cartItems.add(productId);
+    console.log(`Product ID: ${productId.id}, added to cart`);
   } else {
-    console.log(`Product ${productId} already in cart`);
+    console.log(`Product ID: ${productId.id}, already in cart`);
   }
 };
 
