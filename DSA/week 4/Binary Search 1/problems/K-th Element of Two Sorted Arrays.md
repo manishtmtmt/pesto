@@ -17,8 +17,11 @@ The K-th smallest element among the combined elements of arr1 and arr2.
 
 ## Test Case 1:
 Sample Input:
+
 2 4 6 8 10
+
 1 3 5 7 9 11
+
 5
 
 Sample Output:
@@ -26,8 +29,11 @@ Sample Output:
 
 ## Test Case 2:
 Sample input:
+
 1 2 3 4 5
+
 6 7 8 9 10
+
 7
 
 Sample output:

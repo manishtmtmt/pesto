@@ -28,12 +28,18 @@ maximum number of coins
 that can be collected.
 
 ## Test Case 1:
-sample Input
+sample Input:
+
 5
+
 0 2 3 4 1
+
 2 5 1 2 6
+
 3 6 2 5 9
+
 8 1 9 2 5
+
 2 3 2 1 6
 
 Sample Output
@@ -41,9 +47,13 @@ Sample Output
 
 ## Test Case 2:
 Sample input:
+
 3
+
 1 2 3
+
 4 5 6
+
 7 8 9
 
 Sample output:

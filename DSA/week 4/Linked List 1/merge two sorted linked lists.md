@@ -19,8 +19,10 @@ array representing the
 merged sorted linked list.
 
 ## Test Case 1:
-sample Input
+sample Input:
+
 1 3 5
+
 2 4 6
 
 Sample Output
@@ -28,6 +30,7 @@ Sample Output
 
 ## Test Case 2:
 1 2 4
+
 3 5 6
 
 Sample output:

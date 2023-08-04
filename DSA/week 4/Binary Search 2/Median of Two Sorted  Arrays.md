@@ -27,9 +27,13 @@ of the two sorted arrays.
 
 ## Test Case 1:
 Sample Input:
+
 4
+
 1 3 5 7
+
 3
+
 2 4 6
 
 Sample Output:
@@ -37,9 +41,13 @@ Sample Output:
 
 ## Test Case 2:
 Sample input:
+
 4
+
 1 1 3 4
+
 4
+
 2 2 5 6
 
 Sample output:

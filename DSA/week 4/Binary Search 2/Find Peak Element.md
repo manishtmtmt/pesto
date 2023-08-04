@@ -29,7 +29,9 @@ An integer representing the index of any peak element.
 
 ## Test Case 1:
 Sample Input:
+
 6
+
 1 2 1 3 5 6 4
 
 Sample Output:
@@ -37,7 +39,9 @@ Sample Output:
 
 ## Test Case 2:
 Sample input:
+
 4
+
 1 2 3 4 5
 
 Sample output:

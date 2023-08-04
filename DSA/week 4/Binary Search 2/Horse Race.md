@@ -29,7 +29,9 @@ maximum strength value.
 
 ## Test Case 1:
 Sample Input:
+
 5 2
+
 4 2 7 5 1
 
 Sample Output
@@ -37,7 +39,9 @@ Sample Output
 
 ## Test Case 2:
 Sample input:
+
 6 3
+
 9 4 8 2 6 5
 
 Sample output:
