@@ -13,8 +13,11 @@ Check if a given tree is a subtree of another tree?
 Display whether the second tree is a subtree of the first tree.
 
 ## Test Case 1:
+
 Sample Input:
+
 1 2 3 4 5 6
+
 2 4 5
 
 Sample Output
@@ -22,8 +25,11 @@ The second tree is a subtree of the first tree.
 
 
 ## Test Case 2:
+
 sample input: 
+
 1 2 3 4 5 6
+
 5 4 6
 
 sample output:

@@ -15,8 +15,11 @@ Implement a function to find the lowest common ancestor of two nodes in a binary
 The value of the lowest common ancestor of the two nodes
 
 ## Test Case 1:
+
 Sample Input:
+
 7
+
 3
 5
 1
@@ -24,8 +27,10 @@ Sample Input:
 2
 0
 8
+
 5
 1
+
 
 
 Sample Output:
@@ -33,15 +38,20 @@ The lowest common ancestor of nodes 5 and 1 is 3.
 
 
 ## Test Case 2:
+
 sample input: 
+
 5
+
 1
 2
 3
 4
 5
+
 2
 4
+
 
 sample output:
 The lowest common ancestor of nodes 2 and 4 is 2.

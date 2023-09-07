@@ -16,8 +16,11 @@ The minimum number of attempts needed to find the highest safe floor.
 
 
 ## Test Case 1:
+
 Sample Input:
+
 2
+
 10
 
 Sample Output:
@@ -26,7 +29,9 @@ Sample Output:
 
 ## Test Case 2:
 sample input: 
+
 3
+
 14
 
 sample output:

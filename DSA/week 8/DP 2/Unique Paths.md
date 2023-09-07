@@ -1,5 +1,5 @@
 ## Problem Statement:
-Climbing Stairs
+Unique Paths
 
 ## Problem Statement:
 Write a program to find the number of unique paths to reach the bottom-right corner of an m x n grid, starting from the top-left corner and moving only right or down. Your task is to calculate the number of unique paths.

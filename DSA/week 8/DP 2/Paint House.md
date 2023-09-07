@@ -14,14 +14,26 @@ The program prints the minimum cost to paint all the houses.
 
 ## Test Case 1:
 Sample Input:
-17 2 17, 16 16 5, 14 3 19
+
+17 2 17, 
+
+16 16 5, 
+
+14 3 19
 
 Sample Output:
 10
 
 ## Test Case 2:
 sample input: 
-1 2 3, 4 5 6, 7 8 9, 10 11 12
+
+1 2 3, 
+
+4 5 6, 
+
+7 8 9,
+
+10 11 12
 
 sample output:
 20
