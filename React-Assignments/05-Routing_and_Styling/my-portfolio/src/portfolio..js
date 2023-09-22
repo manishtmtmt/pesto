@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 import emoji from "react-easy-emoji";
+import splashAnimation from './assets/lottie/splashAnimation.json'
 
 const greeting = {
   username: "Manish Tiwari",
@@ -179,6 +180,12 @@ const contactInfo = {
   email_address: "manisht.mt.mt@gmail.com",
 };
 
+const splashScreen = {
+  enabled: true, // set false to disable splash screen
+  animation: splashAnimation,
+  duration: 2000, // Set animation duration as per your animation
+};
+
 export {
   greeting,
   socialMediaLinks,
@@ -186,4 +193,5 @@ export {
   skillsSection,
   projects,
   contactInfo,
+  splashScreen,
 };

@@ -1,15 +1,23 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useCallback, useEffect, useState } from "react";
+import { getData, saveData } from "../hooks/useLocalStorage";
 
 export const ThemeContext = createContext("light");
 
-export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(false);
+const isCurrentThemeDark = getData("isDark");
+const initialValue = isCurrentThemeDark !== null ? isCurrentThemeDark : false;
 
-  const toggleTheme = () => {
-    setIsDark(() => !isDark);
-  };
+export const ThemeProvider = ({ children }) => {
+  const [isDark, setIsDark] = useState(initialValue);
+
+  const toggleTheme = useCallback(() => {
+    setIsDark((prev) => !prev);
+  }, []);
+
+  useEffect(() => {
+    saveData("isDark", isDark);
+  }, [isDark, toggleTheme]);
 
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
