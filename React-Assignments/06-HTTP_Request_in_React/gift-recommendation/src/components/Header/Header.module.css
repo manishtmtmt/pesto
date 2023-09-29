@@ -1,0 +1,10 @@
+.header {
+  height: 20vh;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.emoji {
+  font-size: 48px;
+  margin-bottom: -20px;
+}
