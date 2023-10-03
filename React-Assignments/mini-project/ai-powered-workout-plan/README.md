@@ -2,6 +2,8 @@
 
 ![Web capture_3-10-2023_161952_smartfit-sigma vercel app](https://github.com/manishtmtmt/pesto/assets/46663132/5306188c-bb25-477d-830e-d9b4bb2aa278)
 
+[Live Preview](https://smartfit-sigma.vercel.app/)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
