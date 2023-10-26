@@ -3,7 +3,7 @@ import axios from "axios";
 const OPENAI_API_KEY = import.meta.env.VITE_OPENAI_API_KEY;
 
 const getPrompt = (payload) => {
-  return `Suggest some gift ideas for a ${payload.gae} ${payload.gender} that is into ${payload.interest} in budget less than 10,000 rupees.`;
+  return `Suggest some gift ideas for a ${payload.age} ${payload.gender} that interest is into ${payload.interest} in budget less than 10,000 rupees.`;
 };
 
 export const getGiftRecommendation = async (payload) => {
@@ -15,7 +15,7 @@ export const getGiftRecommendation = async (payload) => {
   };
 
   const prompt = getPrompt(payload);
-  const response = await axios.post(
+  const { data } = await axios.post(
     url,
     {
       model: "gpt-3.5-turbo-instruct",
@@ -26,5 +26,5 @@ export const getGiftRecommendation = async (payload) => {
     { headers }
   );
 
-  return response;
+  return { data };
 };

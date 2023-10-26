@@ -11,12 +11,11 @@ const initialState = {
 export const fetchGiftRecommendation = createAsyncThunk(
   "gift/getRecommendation",
   async (payload) => {
-    console.log("fetchGiftRecommendation triggered");
     try {
-      const response = getGiftRecommendation(payload);
+      const response = await getGiftRecommendation(payload);
       return response;
     } catch (error) {
-      throw new Error(error);
+      throw new Error(error.message);
     }
   }
 );
@@ -25,23 +24,20 @@ const giftSlice = createSlice({
   name: "gift",
   initialState,
   reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(
-        fetchGiftRecommendation.pending,
-        (state) => (state.loading = true)
-      )
-      .addCase(fetchGiftRecommendation.fulfilled, (state, action) => {
-        console.log("action:", JSON.stringify(action));
-        state.loading = false;
-        state.data = action;
-        state.error = null;
-      })
-      .addCase(fetchGiftRecommendation.rejected, (state, action) => {
-        state.loading = false;
-        state.data = null;
-        state.error = action;
-      });
+  extraReducers: {
+    [fetchGiftRecommendation.pending]: (state) => {
+      state.loading = true;
+    },
+    [fetchGiftRecommendation.fulfilled]: (state, action) => {
+      state.loading = false;
+      state.data = action.payload?.data?.choices[0];
+      state.error = null;
+    },
+    [fetchGiftRecommendation.rejected]: (state, action) => {
+      state.loading = false;
+      state.data = null;
+      state.error = action.error.message;
+    },
   },
 });
 

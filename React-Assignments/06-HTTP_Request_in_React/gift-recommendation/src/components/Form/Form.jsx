@@ -6,9 +6,8 @@ import { fetchGiftRecommendation } from "../../redux/giftSlice";
 
 export const Form = () => {
   const [payload, setPayload] = useState({});
+  const { loading, data, error } = useSelector((state) => state.gift);
   const dispatch = useDispatch();
-
-  const { loading } = useSelector((state) => state.gift);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,9 +18,9 @@ export const Form = () => {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     console.log("generate button clicked");
-    dispatch(fetchGiftRecommendation(payload));
+    const res = await dispatch(fetchGiftRecommendation(payload)).unwrap();
   };
 
   return (
