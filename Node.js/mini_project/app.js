@@ -50,7 +50,7 @@ app.use("/posts", blogRouter);
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
-app.listen(PORT, async () => {
+const server = app.listen(PORT, async () => {
   try {
     await connection;
     console.log("Successfully connected to MONGODB.");
@@ -59,3 +59,5 @@ app.listen(PORT, async () => {
   }
   console.log(`Server is up and running on ${PORT}`);
 });
+
+module.exports = { app, server };

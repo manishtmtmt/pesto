@@ -49,11 +49,12 @@ module.exports.getAllPosts = async (req, res) => {
 };
 
 module.exports.getSpecificPost = async (req, res) => {
-  const postId = req.params.postId;
+  const { postId = "" } = req.params;
 
   try {
-    if (!postId)
-      return res.status(400).json({ success: false, message: "Post Id is required." });
+    if (!postId) {
+      res.status(400).json({ success: false, message: "Post Id is required." });
+    }
 
     const post = await PostModel.findById(postId);
 
@@ -73,7 +74,9 @@ module.exports.updatePost = async (req, res) => {
   const { postId } = req.params;
   try {
     if (!postId)
-      return res.status(400).json({ success: false, message: "Post Id is required" });
+      return res
+        .status(400)
+        .json({ success: false, message: "Post Id is required" });
 
     const post = await PostModel.findById(postId);
 
@@ -104,16 +107,20 @@ module.exports.deletePost = async (req, res) => {
 
   try {
     if (!postId)
-      return res.status(400).json({ success: false, message: "Post Id is required" });
+      return res
+        .status(400)
+        .json({ success: false, message: "Post Id is required" });
 
     const post = await PostModel.findByIdAndDelete(postId);
 
-    if (!post) return res.status(404).json({ success: false, messaga: "No post found"})
+    if (!post)
+      return res.status(404).json({ success: false, message: "No post found" });
 
     return res
       .status(200)
       .json({ success: true, message: "Post deleted successfully." });
   } catch (error) {
+    console.log("🚀 ~ file: blog-controller.js:123 ~ module.exports.deletePost ~ error:", error)
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });
