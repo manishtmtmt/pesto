@@ -46,7 +46,7 @@ const router = Router();
 
 /**
  * @swagger
- * /posts:
+ * /api/posts:
  *   post:
  *     summary: Create a new blog post
  *     description: Create a new blog post with authentication.
@@ -149,7 +149,7 @@ router.post("/", authenticate, limit, createPost);
 
 /**
  * @swagger
- * /posts:
+ * /api/posts:
  *   get:
  *     summary: Get all blog posts
  *     description: Retrieve a list of all blog posts.
@@ -189,7 +189,7 @@ router.get("/", getAllPosts);
 
 /**
  * @swagger
- * /posts/{postId}:
+ * /api/posts/{postId}:
  *   get:
  *     summary: Get a specific blog post by ID
  *     description: Retrieve a specific blog post by its ID.
@@ -259,7 +259,7 @@ router.get("/:postId", getSpecificPost);
 
 /**
  * @swagger
- * /posts/{postId}:
+ * /api/posts/{postId}:
  *   patch:
  *     summary: Update a specific blog post by ID
  *     description: Update a specific blog post identified by its ID.
@@ -381,7 +381,7 @@ router.patch("/:postId", authenticate, limit, updatePost);
 
 /**
  * @swagger
- * /posts/{postId}:
+ * /api/posts/{postId}:
  *   delete:
  *     summary: Delete a specific blog post by ID
  *     description: Delete a specific blog post identified by its ID.

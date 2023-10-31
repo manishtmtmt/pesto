@@ -44,9 +44,9 @@ app.get("/", async (req, res) => {
   res.send("Welcome to Blog Management Platform.");
 });
 
-app.use("/users", usersRouter);
+app.use("/api/auth", usersRouter);
 
-app.use("/posts", blogRouter);
+app.use("/api/posts", blogRouter);
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 

@@ -10,7 +10,7 @@ const router = Router();
 
 /**
  * @swagger
- * /users/sign-up:
+ * /api/auth/sign-up:
  *   post:
  *     summary: User Registration
  *     description: Register a new user.
@@ -77,7 +77,7 @@ router.post("/sign-up", registration);
 
 /**
  * @swagger
- * /users/sign-in:
+ * /api/auth/sign-in:
  *   post:
  *     summary: User Sign-In
  *     description: Sign in with a registered user account.
@@ -153,7 +153,7 @@ router.post("/sign-in", login);
 
 /**
  * @swagger
- * /users/{userId}:
+ * /api/auth/{userId}:
  *   get:
  *     summary: Get user details by user ID
  *     tags:
